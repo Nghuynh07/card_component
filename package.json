@@ -1,0 +1,13 @@
+{
+  "name": "card_component",
+  "version": "0.1.0",
+  "description": "SASS compile|autoprefix|minimize and live-reload dev server using Browsersync for static HTML",
+  "main": "index.html",
+  "author": "Huynh",
+  "scripts": {
+    "watch:sass": "sass  --no-source-map --watch sass:css"
+  },
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}

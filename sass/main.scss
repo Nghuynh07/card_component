@@ -1,0 +1,170 @@
+@use "base.scss" as *;
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-dark-blue-main;
+  display: grid;
+  place-content: center;
+  grid-template-columns: min(30rem, 90%);
+  grid-template-rows: 50rem;
+  position: relative;
+  z-index: -1000;
+
+  .mid-bg {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 33rem;
+    height: 50rem;
+    border-radius: 5px 5px 5rem 5rem;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0 0 0 /0.1);
+  }
+
+  .bottom-bg {
+    position: absolute;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    width: 36rem;
+    height: 60rem;
+    border-radius: 6rem;
+    transform: translate(-50%, -50%);
+    background-color: hsl(216, 45%, 16%);
+    opacity: 0.2;
+  }
+
+  .component {
+    padding: 2rem;
+    display: grid;
+    grid-row-gap: 2rem;
+    place-items: center;
+    border-radius: 15px;
+    background-color: $color-dark-blue-card;
+    position: relative;
+    z-index: 100;
+
+    &-images {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      &:hover .component-overlay {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+      }
+    }
+
+    &-img-wrapper {
+      width: 100%;
+      aspect-ratio: 1/1;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+    }
+
+    &-overlay {
+      cursor: pointer;
+      background-color: rgb($color-cyan, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      aspect-ratio: 1/1;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: scale(0);
+      border-radius: 10px;
+      transition: opacity 0.3s, visibility 0.3s, transform 0.3s;
+    }
+
+    &-content {
+      display: grid;
+      grid-row-gap: 1.5rem;
+    }
+
+    &-title {
+      color: $color-white;
+      letter-spacing: 0.05rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      @include hoverCyan;
+    }
+
+    &-infos {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-text {
+      color: $color-blue;
+      font-size: 1.3rem;
+      font-weight: 300;
+      word-spacing: 0.2rem;
+      line-height: 1.5;
+    }
+
+    &-left {
+      @include flexCenter;
+      h4 {
+        @include fontStyles(600);
+        @include hoverCyan;
+      }
+      img {
+        width: 0.8rem;
+        height: 1.3rem;
+      }
+    }
+
+    &-right {
+      @include flexCenter;
+      h4 {
+        @include fontStyles;
+      }
+      img {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
+    }
+    &-line {
+      width: 100%;
+      height: 0.1rem;
+      background-color: rgba($color-blue, 0.2);
+    }
+
+    &-profile {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      &-img-wrapper {
+        width: 3.5rem;
+        height: 3.5rem;
+        object-fit: cover;
+        margin-right: 1.5rem;
+        position: relative;
+        border-radius: 50%;
+        border: 0.15rem solid $color-white;
+        img {
+          width: 100%;
+          height: 100%;
+          position: relative;
+        }
+      }
+      p {
+        color: $color-blue;
+        font-size: 1.2rem;
+        // letter-spacing: 0.05rem;
+        span {
+          color: $color-white;
+          @include hoverCyan;
+        }
+      }
+    }
+  }
+}
