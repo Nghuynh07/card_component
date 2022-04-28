@@ -9,7 +9,6 @@
   grid-template-columns: min(30rem, 90%);
   grid-template-rows: 50rem;
   position: relative;
-  z-index: -1000;
 
   .mid-bg {
     position: absolute;
@@ -43,7 +42,6 @@
     border-radius: 15px;
     background-color: $color-dark-blue-card;
     position: relative;
-    z-index: 100;
 
     &-images {
       width: 100%;
@@ -87,6 +85,7 @@
     &-content {
       display: grid;
       grid-row-gap: 1.5rem;
+      z-index: 100;
     }
 
     &-title {

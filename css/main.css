@@ -25,7 +25,6 @@ html {
   grid-template-columns: min(30rem, 90%);
   grid-template-rows: 50rem;
   position: relative;
-  z-index: -1000;
 }
 .container .mid-bg {
   position: absolute;
@@ -57,7 +56,6 @@ html {
   border-radius: 15px;
   background-color: hsl(216deg, 50%, 16%);
   position: relative;
-  z-index: 100;
 }
 .container .component-images {
   width: 100%;
@@ -98,6 +96,7 @@ html {
 .container .component-content {
   display: grid;
   grid-row-gap: 1.5rem;
+  z-index: 100;
 }
 .container .component-title {
   color: hsl(0deg, 0%, 100%);

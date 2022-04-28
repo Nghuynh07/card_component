@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Nghuynh07/card_component)
+- Live Site URL: [Add live site URL here](https://vermillion-kitten-ab75d1.netlify.app/)
 
 ## My process
 
@@ -49,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-For the hover state of the equilibrium image, I learned that its easier to hover over the parent's element than the image itself. This works if the parent element has a higher z-index than both the images.
+For the hover state of the equilibrium image, I learned that its easier to hover over the parent's element than the image itself. This works if the parent element has a higher z-index than both the images and for z-index to happen its position needs to be set.
 
 ## Author
 
